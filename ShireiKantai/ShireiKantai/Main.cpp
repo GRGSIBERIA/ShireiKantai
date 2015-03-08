@@ -1,6 +1,8 @@
 ﻿#include <Siv3D.hpp>
 #include <json11.hpp>
 
+#include "SoubiRecord.hpp"
+
 void Main()
 {
 	const Font font(30);

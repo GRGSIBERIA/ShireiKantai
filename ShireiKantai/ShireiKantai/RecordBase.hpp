@@ -2,6 +2,9 @@
 
 #include <Siv3D.hpp>
 #include <json11.hpp>
+
+#include "PropertyMacro.hpp"
+
 #include "Shigen.hpp"
 
 namespace kantai
