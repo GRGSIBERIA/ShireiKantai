@@ -19,7 +19,7 @@ namespace kantai
 			public:
 				RecordBase() {}
 
-				virtual json11::Json ToJson() { return json11::Json(); }
+				virtual json11::Json ToJson() const { return json11::Json(); }
 			};
 		}
 	}
