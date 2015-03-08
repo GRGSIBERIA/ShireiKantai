@@ -52,7 +52,7 @@ namespace kantai
 					P_STRING(Leng);
 					P_STRING(Name);
 
-					P_SHIGEN(Broken);
+					P_CLASS(Shigen, Broken);
 				}
 			};
 		}
