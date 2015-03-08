@@ -4,6 +4,8 @@
 #include <memory>
 #include <json11.hpp>
 
+#include "PropertyMacro.hpp"
+
 namespace kantai
 {
 	namespace data
@@ -11,19 +13,16 @@ namespace kantai
 		/*
 		* 資源を表すクラス
 		*/
-		class Shigen
+		struct Shigen
 		{
-			int fuel;
-			int bullet;
-			int steel;
-			int bauxite;
-
-			const int pFuel() { return fuel; }
-			const int pBullet() { return bullet; }
-			const int pSteel() { return steel; }
-			const int pBauxite() { return bauxite; }
+			PROPERTY(int, fuel);
+			PROPERTY(int, bullet);
+			PROPERTY(int, steel);
+			PROPERTY(int, bauxite);
 
 		public:
+			Shigen() {}
+
 			/*
 			* 資源を表すクラス
 			*/
@@ -50,10 +49,24 @@ namespace kantai
 				bauxite = items[3].int_value();
 			}
 
-			__declspec(property(get = pFuel)) const int Fuel;		//!< 燃料
-			__declspec(property(get = pBullet)) const int Bullet;	//!< 弾薬
-			__declspec(property(get = pSteel)) const int Steel;		//!< 鋼材
-			__declspec(property(get = pBauxite)) const int Bauxite;	//!< ボーキ
+			/*
+			* 資源を表すクラス
+			* \param [in] shigen 資源
+			*/
+			Shigen(const Shigen& shigen)
+				: fuel(shigen.fuel), bullet(shigen.bullet), steel(shigen.steel), bauxite(shigen.bauxite) {}
+
+			/*
+			* =演算子
+			*/
+			Shigen& operator=(const Shigen& shigen)
+			{
+				fuel = shigen.fuel;
+				bullet = shigen.bullet;
+				steel = shigen.steel;
+				bauxite = shigen.bauxite;
+				return *this;
+			}
 		};
 	}
 }
