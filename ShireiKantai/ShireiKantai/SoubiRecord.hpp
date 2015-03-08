@@ -33,27 +33,26 @@ namespace kantai
 			public:
 				SoubiRecord(const json11::Json& json) 
 				{
-					baku = json["baku"].int_value();
-					houg = json["houg"].int_value();
-					houk = json["houk"].int_value();
-					houm = json["houm"].int_value();
-					raig = json["raig"].int_value();
-					raim = json["raim"].int_value();
-					rare = json["rare"].int_value();
-					saku = json["saku"].int_value();
-					tais = json["tais"].int_value();
-					tyku = json["tyku"].int_value();
-					type1 = json["type1"].int_value();
-					type2 = json["type2"].int_value();
-					type3 = json["type3"].int_value();
+					P_INTEGER(baku);
+					P_INTEGER(houg);
+					P_INTEGER(houk);
+					P_INTEGER(houm);
+					P_INTEGER(raig);
+					P_INTEGER(raim);
+					P_INTEGER(rare);
+					P_INTEGER(saku);
+					P_INTEGER(tais);
+					P_INTEGER(tyku);
+					P_INTEGER(type1);
+					P_INTEGER(type2);
+					P_INTEGER(type3);
+					P_INTEGER(id);
+					P_INTEGER(sortno);
 
-					leng = Widen(json["leng"].string_value());
-					name = Widen(json["name"].string_value());
+					P_STRING(leng);
+					P_STRING(name);
 
-					id = json["id"].int_value();
-					sortno = json["sortno"].int_value();
-
-					broken = Shigen(json["broken"]);
+					P_SHIGEN(broken);
 				}
 			};
 		}
