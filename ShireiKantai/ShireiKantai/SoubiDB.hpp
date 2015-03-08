@@ -13,7 +13,7 @@ namespace kantai
 			class SoubiDB : public DBBase
 			{
 			public:
-				SoubiDB() : DBBase(L"soubi.json")
+				SoubiDB() : DBBase(L"soubi.json") {}
 			};
 		}
 	}
