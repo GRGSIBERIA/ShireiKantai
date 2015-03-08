@@ -17,8 +17,8 @@ namespace kantai
 			*/
 			class KanRecord : RecordBase
 			{
-				PROPERTY(int, Afterbull);
-				PROPERTY(int, Afterfuel);
+				PROPERTY(int, AfterBull);
+				PROPERTY(int, AfterFuel);
 				PROPERTY(int, Afterlv);
 				PROPERTY(int, Buildtime);
 				PROPERTY(int, BullMax);
@@ -58,8 +58,8 @@ namespace kantai
 
 				KanRecord(const json11::Json& json) 
 				{
-					P_INTEGER(Afterbull);
-					P_INTEGER(Afterfuel);
+					P_INTEGER(AfterBull);
+					P_INTEGER(AfterFuel);
 					P_INTEGER(Afterlv);
 					P_INTEGER(Buildtime);
 					P_INTEGER(BullMax);
