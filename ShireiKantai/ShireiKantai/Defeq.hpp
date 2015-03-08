@@ -54,6 +54,20 @@ namespace kantai
 					return *this;
 				}
 
+				/*
+				* Json‚É•ÏŠ·
+				*/
+				json11::Json ToJson() const
+				{
+					std::vector<std::string> strings;
+					for (int i = 0; i < equips.size(); ++i)
+						strings.push_back(equips[i].narrow());
+
+					return json11::Json::array{
+						strings
+					};
+				}
+
 				std::vector<String>& __Get_equips() { return equips; }
 				String __Get_equips(int i) const { return equips[i]; }
 				void __Set_equips(int i, int val) { equips[i] = val; }

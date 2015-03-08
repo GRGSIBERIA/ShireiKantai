@@ -54,6 +54,16 @@ namespace kantai
 					max = obj.max;
 					return *this;
 				}
+
+				/*
+				* JSON‚É•ÏŠ·
+				*/
+				json11::Json ToJson() const
+				{
+					return json11::Json::array{
+						min, max
+					};
+				}
 			};
 		}
 	}

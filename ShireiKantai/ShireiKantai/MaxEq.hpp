@@ -50,6 +50,16 @@ namespace kantai
 					return *this;
 				}
 
+				/*
+				* JSON‚É•ÏŠ·
+				*/
+				json11::Json ToJson() const
+				{
+					return json11::Json::array{
+						slots
+					};
+				}
+
 				std::array<int, 5>& __Get_slots() { return slots; }
 				int __Get_slots(int i) const { return slots[i]; }
 				void __Set_slots(int i, int val) { slots[i] = val; }

@@ -70,9 +70,14 @@ namespace kantai
 					return *this;
 				}
 
-				json11::Json ToJson()
+				/*
+				* JSON‚É•ÏŠ·
+				*/
+				json11::Json ToJson() const
 				{
-					json11::Json retval;
+					return json11::Json::array{
+						fuel, bullet, steel, bauxite
+					};
 				}
 			};
 		}

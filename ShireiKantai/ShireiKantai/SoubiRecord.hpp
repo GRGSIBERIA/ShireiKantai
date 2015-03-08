@@ -61,6 +61,35 @@ namespace kantai
 
 					P_CLASS(Shigen, broken);
 				}
+
+				/*
+				* JSON‚É•ÏŠ·
+				*/
+				json11::Json ToJson() const
+				{
+					return json11::Json::object{
+						TO_JSON(baku),
+						TO_JSON(houg),
+						TO_JSON(houk),
+						TO_JSON(houm),
+						TO_JSON(raig),
+						TO_JSON(raim),
+						TO_JSON(rare),
+						TO_JSON(saku),
+						TO_JSON(tais),
+						TO_JSON(tyku),
+						TO_JSON(type1),
+						TO_JSON(type2),
+						TO_JSON(type3),
+						TO_JSON(id),
+						TO_JSON(sortNo),
+
+						TO_JSON(leng),
+						TO_JSON(name),
+
+						TO_JSON(broken.ToJson())
+					};
+				}
 			};
 		}
 	}

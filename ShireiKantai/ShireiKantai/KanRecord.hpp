@@ -92,6 +92,48 @@ namespace kantai
 					P_CLASS(DefEq, defeq);
 					P_CLASS(MaxEq, maxeq);
 				}
+
+				/*
+				* JSON‚É•ÏŠ·
+				*/
+				json11::Json ToJson() const
+				{
+					return json11::Json::object{
+						TO_JSON(afterBull),
+						TO_JSON(afterFuel),
+						TO_JSON(afterlv),
+						TO_JSON(buildtime),
+						TO_JSON(bullMax),
+						TO_JSON(cNum),
+						TO_JSON(fuelMax),
+						TO_JSON(id),
+						TO_JSON(slotNum),
+						TO_JSON(sortNo),
+
+						TO_JSON(aftershipid),
+						TO_JSON(cType),
+						TO_JSON(leng),
+						TO_JSON(name),
+						TO_JSON(sokuh),
+						TO_JSON(sType),
+						TO_JSON(yomi),
+
+						TO_JSON(broken.ToJson()),
+						TO_JSON(powUp.ToJson()),
+						TO_JSON(houg.ToJson()),
+						TO_JSON(kaih.ToJson()),
+						TO_JSON(luck.ToJson()),
+						TO_JSON(raig.ToJson()),
+						TO_JSON(saku.ToJson()),
+						TO_JSON(souk.ToJson()),
+						TO_JSON(taik.ToJson()),
+						TO_JSON(tais.ToJson()),
+						TO_JSON(tous.ToJson()),
+						TO_JSON(tyku.ToJson()),
+						TO_JSON(defeq.ToJson()),
+						TO_JSON(maxeq.ToJson())
+					};
+				}
 			};
 		}
 	}
