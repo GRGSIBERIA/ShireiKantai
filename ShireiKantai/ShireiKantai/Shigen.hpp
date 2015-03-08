@@ -13,7 +13,7 @@ namespace kantai
 		/*
 		* Ž‘Œ¹‚ð•\‚·ƒNƒ‰ƒX
 		*/
-		struct Shigen
+		class Shigen
 		{
 			PROPERTY(int, fuel);
 			PROPERTY(int, bullet);
