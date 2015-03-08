@@ -128,6 +128,15 @@
     <Xml Include="engine\objdetect\faceAnime.xml" />
     <Xml Include="engine\objdetect\facePhoto.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DBBase.hpp" />
+    <ClInclude Include="KanDB.hpp" />
+    <ClInclude Include="KanRecord.hpp" />
+    <ClInclude Include="RecordBase.hpp" />
+    <ClInclude Include="Shigen.hpp" />
+    <ClInclude Include="SoubiDB.hpp" />
+    <ClInclude Include="SoubiRecord.hpp" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{01EBD207-CEBE-4DA3-A9A9-7D6E6169945A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
@@ -160,12 +169,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SIV3D_20150103)\Inc;C:\Users\Eiichi\OneDrive\Programs\Siv3D\ShireiKantai\json11;$(IncludePath)</IncludePath>
+    <IncludePath>$(SIV3D_20150103)\Inc;C:\Users\Eiichi\OneDrive\Programs\Siv3D\ShireiKantai\ShireiKantai\json11;$(IncludePath)</IncludePath>
     <LibraryPath>$(SIV3D_20150103)\Lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SIV3D_20150103)\Inc;C:\Users\Eiichi\OneDrive\Programs\Siv3D\ShireiKantai\json11;$(IncludePath)</IncludePath>
+    <IncludePath>$(SIV3D_20150103)\Inc;C:\Users\Eiichi\OneDrive\Programs\Siv3D\ShireiKantai\ShireiKantai\json11;$(IncludePath)</IncludePath>
     <LibraryPath>$(SIV3D_20150103)\Lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

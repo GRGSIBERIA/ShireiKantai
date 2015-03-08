@@ -52,6 +52,21 @@
     <Filter Include="リソース ファイル\engine\shaders\d3d11">
       <UniqueIdentifier>{5d6a0500-1c4d-42b8-bc20-84fc83199957}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ヘッダー ファイル\Data">
+      <UniqueIdentifier>{1b8d2508-7d2d-4048-ad4e-4da361a75f27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Data\DB">
+      <UniqueIdentifier>{a9971d0f-6695-45c3-b990-b52f77321f5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Data\DB\Kan">
+      <UniqueIdentifier>{cdef6970-416f-4a8e-96eb-97232a9261f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Data\DB\Soubi">
+      <UniqueIdentifier>{f5d73c98-e4e5-4e96-9eef-d941aa49f8ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ヘッダー ファイル\Data\Structure">
+      <UniqueIdentifier>{a4950a66-a359-469e-96a7-eb62d3faa238}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -374,5 +389,28 @@
     <Xml Include="engine\objdetect\facePhoto.xml">
       <Filter>リソース ファイル\engine\objdetect</Filter>
     </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="KanDB.hpp">
+      <Filter>ヘッダー ファイル\Data\DB\Kan</Filter>
+    </ClInclude>
+    <ClInclude Include="SoubiDB.hpp">
+      <Filter>ヘッダー ファイル\Data\DB\Soubi</Filter>
+    </ClInclude>
+    <ClInclude Include="DBBase.hpp">
+      <Filter>ヘッダー ファイル\Data\DB</Filter>
+    </ClInclude>
+    <ClInclude Include="KanRecord.hpp">
+      <Filter>ヘッダー ファイル\Data\DB\Kan</Filter>
+    </ClInclude>
+    <ClInclude Include="SoubiRecord.hpp">
+      <Filter>ヘッダー ファイル\Data\DB\Soubi</Filter>
+    </ClInclude>
+    <ClInclude Include="Shigen.hpp">
+      <Filter>ヘッダー ファイル\Data\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="RecordBase.hpp">
+      <Filter>ヘッダー ファイル\Data\DB</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
