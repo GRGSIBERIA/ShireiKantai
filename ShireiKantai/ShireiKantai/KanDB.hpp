@@ -10,9 +10,10 @@ namespace kantai
 			/*
 			* 艦娘用データベース
 			*/
-			class KanDB
+			class KanDB : public DBBase
 			{
-
+			public:
+				KanDB() : DBBase(L"kan.json") {}
 			};
 		}
 	}

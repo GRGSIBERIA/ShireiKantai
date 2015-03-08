@@ -10,9 +10,10 @@ namespace kantai
 			/*
 			* 装備用データベース
 			*/
-			class SoubiDB
+			class SoubiDB : public DBBase
 			{
-
+			public:
+				SoubiDB() : DBBase(L"soubi.json")
 			};
 		}
 	}
