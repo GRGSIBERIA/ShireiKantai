@@ -26,3 +26,6 @@
 
 #define P_CLASS(TYPE, VAR) \
 	VAR = TYPE(json[#VAR]);
+
+#define TO_JSON(VAR) \
+	{ #VAR, VAR }
