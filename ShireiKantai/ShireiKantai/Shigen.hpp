@@ -5,7 +5,6 @@
 #include <json11.hpp>
 
 #include "RecordBase.hpp"
-#include "PropertyMacro.hpp"
 
 namespace kantai
 {
@@ -13,16 +12,15 @@ namespace kantai
 	{
 		namespace DB
 		{
-
 			/*
 			* 資源を表すクラス
 			*/
 			class Shigen : public RecordBase
 			{
-				PROPERTY(int, Fuel);
-				PROPERTY(int, Bullet);
-				PROPERTY(int, Steel);
-				PROPERTY(int, Bauxite);
+				PROPERTY(int, fuel);
+				PROPERTY(int, bullet);
+				PROPERTY(int, steel);
+				PROPERTY(int, bauxite);
 
 			public:
 				Shigen() {}
@@ -31,14 +29,14 @@ namespace kantai
 				* 資源を表すクラス
 				*/
 				Shigen(const int fuel, const int bullet, const int steel, const int bauxite)
-					: Fuel(fuel), Bullet(bullet), Steel(steel), Bauxite(bauxite) {}
+					: fuel(fuel), bullet(bullet), steel(steel), bauxite(bauxite) {}
 
 				/*
 				* 資源を表すクラス
 				* \param [in] shigen 燃料/弾薬/鋼材/ボーキ
 				*/
 				Shigen(const std::array<int, 4>& shigen)
-					: Fuel(shigen[0]), Bullet(shigen[1]), Steel(shigen[2]), Bauxite(shigen[3]) {}
+					: fuel(shigen[0]), bullet(shigen[1]), steel(shigen[2]), bauxite(shigen[3]) {}
 
 				/*
 				* 資源を表すクラス
@@ -47,10 +45,10 @@ namespace kantai
 				Shigen(const json11::Json& json)
 				{
 					const auto items = json.array_items();
-					Fuel = items[0].int_value();
-					Bullet = items[1].int_value();
-					Steel = items[2].int_value();
-					Bauxite = items[3].int_value();
+					fuel = items[0].int_value();
+					bullet = items[1].int_value();
+					steel = items[2].int_value();
+					bauxite = items[3].int_value();
 				}
 
 				/*
@@ -58,18 +56,23 @@ namespace kantai
 				* \param [in] shigen 資源
 				*/
 				Shigen(const Shigen& shigen)
-					: Fuel(shigen.Fuel), Bullet(shigen.Bullet), Steel(shigen.Steel), Bauxite(shigen.Bauxite) {}
+					: fuel(shigen.fuel), bullet(shigen.bullet), steel(shigen.steel), bauxite(shigen.bauxite) {}
 
 				/*
 				* =演算子
 				*/
 				Shigen& operator=(const Shigen& shigen)
 				{
-					Fuel = shigen.Fuel;
-					Bullet = shigen.Bullet;
-					Steel = shigen.Steel;
-					Bauxite = shigen.Bauxite;
+					fuel = shigen.fuel;
+					bullet = shigen.bullet;
+					steel = shigen.steel;
+					bauxite = shigen.bauxite;
 					return *this;
+				}
+
+				json11::Json ToJson()
+				{
+					json11::Json retval;
 				}
 			};
 		}

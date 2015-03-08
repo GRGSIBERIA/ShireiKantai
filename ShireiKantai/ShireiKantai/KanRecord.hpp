@@ -17,80 +17,80 @@ namespace kantai
 			*/
 			class KanRecord : RecordBase
 			{
-				PROPERTY(int, AfterBull);
-				PROPERTY(int, AfterFuel);
-				PROPERTY(int, Afterlv);
-				PROPERTY(int, Buildtime);
-				PROPERTY(int, BullMax);
-				PROPERTY(int, CNum);
-				PROPERTY(int, FuelMax);
-				PROPERTY(int, Id);
-				PROPERTY(int, SlotNum);
-				PROPERTY(int, SortNo);
+				PROPERTY(int, afterBull);
+				PROPERTY(int, afterFuel);
+				PROPERTY(int, afterlv);
+				PROPERTY(int, buildtime);
+				PROPERTY(int, bullMax);
+				PROPERTY(int, cNum);
+				PROPERTY(int, fuelMax);
+				PROPERTY(int, id);
+				PROPERTY(int, slotNum);
+				PROPERTY(int, sortNo);
 				
-				PROPERTY(String, Aftershipid);
-				PROPERTY(String, CType);
-				PROPERTY(String, Leng);
-				PROPERTY(String, Name);
-				PROPERTY(String, Sokuh);
-				PROPERTY(String, SType);
-				PROPERTY(String, Yomi);
+				PROPERTY(String, aftershipid);
+				PROPERTY(String, cType);
+				PROPERTY(String, leng);
+				PROPERTY(String, name);
+				PROPERTY(String, sokuh);
+				PROPERTY(String, sType);
+				PROPERTY(String, yomi);
 
-				PROPERTY(Shigen, Broken);
-				PROPERTY(Shigen, PowUp);
+				PROPERTY(Shigen, broken);
+				PROPERTY(Shigen, powUp);
 
-				PROPERTY(MinMax, Houg);
-				PROPERTY(MinMax, Kaih);
-				PROPERTY(MinMax, Luck);
-				PROPERTY(MinMax, Raig);
-				PROPERTY(MinMax, Saku);
-				PROPERTY(MinMax, Souk);
-				PROPERTY(MinMax, Taik);
-				PROPERTY(MinMax, Tais);
-				PROPERTY(MinMax, Tous);
-				PROPERTY(MinMax, Tyku);
+				PROPERTY(MinMax, houg);
+				PROPERTY(MinMax, kaih);
+				PROPERTY(MinMax, luck);
+				PROPERTY(MinMax, raig);
+				PROPERTY(MinMax, saku);
+				PROPERTY(MinMax, souk);
+				PROPERTY(MinMax, taik);
+				PROPERTY(MinMax, tais);
+				PROPERTY(MinMax, tous);
+				PROPERTY(MinMax, tyku);
 
-				PROPERTY(DefEq, Defeq);
-				PROPERTY(MaxEq, Maxeq);
+				PROPERTY(DefEq, defeq);
+				PROPERTY(MaxEq, maxeq);
 
 			public:
 				KanRecord() {}
 
 				KanRecord(const json11::Json& json) 
 				{
-					P_INTEGER(AfterBull);
-					P_INTEGER(AfterFuel);
-					P_INTEGER(Afterlv);
-					P_INTEGER(Buildtime);
-					P_INTEGER(BullMax);
-					P_INTEGER(CNum);
-					P_INTEGER(FuelMax);
-					P_INTEGER(Id);
-					P_INTEGER(SlotNum);
-					P_INTEGER(SortNo);
+					P_INTEGER(afterBull);
+					P_INTEGER(afterFuel);
+					P_INTEGER(afterlv);
+					P_INTEGER(buildtime);
+					P_INTEGER(bullMax);
+					P_INTEGER(cNum);
+					P_INTEGER(fuelMax);
+					P_INTEGER(id);
+					P_INTEGER(slotNum);
+					P_INTEGER(sortNo);
 
-					P_STRING(Aftershipid);
-					P_STRING(CType);
-					P_STRING(Leng);
-					P_STRING(Name);
-					P_STRING(Sokuh);
-					P_STRING(SType);
-					P_STRING(Yomi);
+					P_STRING(aftershipid);
+					P_STRING(cType);
+					P_STRING(leng);
+					P_STRING(name);
+					P_STRING(sokuh);
+					P_STRING(sType);
+					P_STRING(yomi);
 
-					P_CLASS(Shigen, Broken);
-					P_CLASS(Shigen, PowUp);
-					P_CLASS(MinMax, Houg);
-					P_CLASS(MinMax, Kaih);
-					P_CLASS(MinMax, Luck);
-					P_CLASS(MinMax, Raig);
-					P_CLASS(MinMax, Saku);
-					P_CLASS(MinMax, Souk);
-					P_CLASS(MinMax, Taik);
-					P_CLASS(MinMax, Tais);
-					P_CLASS(MinMax, Tous);
-					P_CLASS(MinMax, Tyku);
-					P_CLASS(DefEq, Defeq);
-					P_CLASS(MaxEq, Maxeq);
+					P_CLASS(Shigen, broken);
+					P_CLASS(Shigen, powUp);
+					P_CLASS(MinMax, houg);
+					P_CLASS(MinMax, kaih);
+					P_CLASS(MinMax, luck);
+					P_CLASS(MinMax, raig);
+					P_CLASS(MinMax, saku);
+					P_CLASS(MinMax, souk);
+					P_CLASS(MinMax, taik);
+					P_CLASS(MinMax, tais);
+					P_CLASS(MinMax, tous);
+					P_CLASS(MinMax, tyku);
+					P_CLASS(DefEq, defeq);
+					P_CLASS(MaxEq, maxeq);
 				}
 			};
 		}

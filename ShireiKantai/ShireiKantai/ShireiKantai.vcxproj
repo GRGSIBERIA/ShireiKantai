@@ -130,8 +130,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DBBase.hpp" />
+    <ClInclude Include="Defeq.hpp" />
     <ClInclude Include="KanDB.hpp" />
     <ClInclude Include="KanRecord.hpp" />
+    <ClInclude Include="MaxEq.hpp" />
+    <ClInclude Include="MinMax.hpp" />
+    <ClInclude Include="PropertyMacro.hpp" />
     <ClInclude Include="RecordBase.hpp" />
     <ClInclude Include="Shigen.hpp" />
     <ClInclude Include="SoubiDB.hpp" />

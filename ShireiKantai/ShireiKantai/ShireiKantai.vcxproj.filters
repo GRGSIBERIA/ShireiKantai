@@ -64,7 +64,7 @@
     <Filter Include="ヘッダー ファイル\Data\DB\Soubi">
       <UniqueIdentifier>{f5d73c98-e4e5-4e96-9eef-d941aa49f8ad}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ヘッダー ファイル\Data\Structure">
+    <Filter Include="ヘッダー ファイル\Data\DB\Structure">
       <UniqueIdentifier>{a4950a66-a359-469e-96a7-eb62d3faa238}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -407,10 +407,22 @@
       <Filter>ヘッダー ファイル\Data\DB\Soubi</Filter>
     </ClInclude>
     <ClInclude Include="Shigen.hpp">
-      <Filter>ヘッダー ファイル\Data\Structure</Filter>
+      <Filter>ヘッダー ファイル\Data\DB\Structure</Filter>
     </ClInclude>
     <ClInclude Include="RecordBase.hpp">
       <Filter>ヘッダー ファイル\Data\DB</Filter>
+    </ClInclude>
+    <ClInclude Include="PropertyMacro.hpp">
+      <Filter>ヘッダー ファイル\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="MinMax.hpp">
+      <Filter>ヘッダー ファイル\Data\DB\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="Defeq.hpp">
+      <Filter>ヘッダー ファイル\Data\DB\Structure</Filter>
+    </ClInclude>
+    <ClInclude Include="MaxEq.hpp">
+      <Filter>ヘッダー ファイル\Data\DB\Structure</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

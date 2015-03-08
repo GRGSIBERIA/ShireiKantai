@@ -17,8 +17,8 @@ namespace kantai
 			*/
 			class MinMax : public RecordBase
 			{
-				PROPERTY(int, Min);
-				PROPERTY(int, Max);
+				PROPERTY(int, min);
+				PROPERTY(int, max);
 
 			public:
 				/*
@@ -30,13 +30,13 @@ namespace kantai
 				* 最大値と最小値を取るクラス
 				*/
 				MinMax(const int min, const int max)
-					: Min(min), Max(max) {}
+					: min(min), max(max) {}
 
 				/*
 				* 最大値と最小値を取るクラス
 				*/
 				MinMax(const std::array<int, 2>& minmax)
-					: Min(minmax[0]), Max(minmax[1]) {}
+					: min(minmax[0]), max(minmax[1]) {}
 
 				/*
 				* 最大値と最小値を取るクラス
@@ -44,14 +44,14 @@ namespace kantai
 				MinMax(const json11::Json& json)
 				{
 					const auto items = json.array_items();
-					Min = items[0].int_value();
-					Max = items[1].int_value();
+					min = items[0].int_value();
+					max = items[1].int_value();
 				}
 
 				MinMax& operator=(const MinMax& obj)
 				{
-					Min = obj.Min;
-					Max = obj.Max;
+					min = obj.min;
+					max = obj.max;
 					return *this;
 				}
 			};

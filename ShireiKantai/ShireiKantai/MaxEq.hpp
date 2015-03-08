@@ -19,7 +19,7 @@ namespace kantai
 			*/
 			class MaxEq : public RecordBase
 			{
-				std::array<int, 5> Slots;
+				std::array<int, 5> slots;
 
 			public:
 				/*
@@ -30,7 +30,7 @@ namespace kantai
 				/*
 				* 初期装備を表すクラス
 				*/
-				MaxEq(const std::array<int, 5>& equips) { Slots = equips; }
+				MaxEq(const std::array<int, 5>& slots) { this->slots = slots; }
 
 				/*
 				* 初期装備を表すクラス
@@ -40,20 +40,20 @@ namespace kantai
 					const auto items = json.array_items();
 					for (int i = 0; i < items.size(); ++i)
 					{
-						Slots[i] = items[i].int_value();
+						slots[i] = items[i].int_value();
 					}
 				}
 
 				MaxEq& operator=(const MaxEq& obj)
 				{
-					Slots = obj.Slots;
+					slots = obj.slots;
 					return *this;
 				}
 
-				std::array<int, 5>& __GetSlots() { return Slots; }
-				int __GetSlots(int i) const { return Slots[i]; }
-				void __SetSlots(int i, int val) { Slots[i] = val; }
-				__declspec(property(get = __GetSlots, put = __SetSlots)) int Slots[];
+				std::array<int, 5>& __Get_slots() { return slots; }
+				int __Get_slots(int i) const { return slots[i]; }
+				void __Set_slots(int i, int val) { slots[i] = val; }
+				__declspec(property(get = __Get_slots, put = __Set_slots)) int slots[];
 			};
 		}
 	}

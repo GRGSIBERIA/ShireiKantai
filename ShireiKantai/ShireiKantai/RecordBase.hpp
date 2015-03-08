@@ -5,17 +5,21 @@
 
 #include "PropertyMacro.hpp"
 
-#include "Shigen.hpp"
-
 namespace kantai
 {
 	namespace data
 	{
 		namespace DB
 		{
+			/*
+			* レコードのベースクラス
+			*/
 			class RecordBase
 			{
 			public:
+				RecordBase() {}
+
+				virtual json11::Json ToJson() { return json11::Json(); }
 			};
 		}
 	}
