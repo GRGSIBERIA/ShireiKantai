@@ -14,14 +14,14 @@ namespace kantai
 			*/
 			class DBBase
 			{
-				json11::Json json;	//!< Œ³‚Æ‚È‚éJSON‚ðŠi”[‚·‚éƒNƒ‰ƒX
+				std::shared_ptr<json11::Json> json;	//!< Œ³‚Æ‚È‚éJSON‚ðŠi”[‚·‚éƒNƒ‰ƒX
 
 			public:
 				DBBase(const FilePath& path)
 				{
 					TextReader reader(path);
 					const auto str = reader.readContents();
-					json = json11::Json(str.narrow());
+					json = std::shared_ptr<json11::Json>(new json11::Json(str.narrow()));
 				}
 			};
 		}
