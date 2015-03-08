@@ -12,6 +12,9 @@ namespace kantai
 	{
 		namespace DB
 		{
+			/*
+			* äÕñ∫ÉåÉRÅ[Éh
+			*/
 			class KanRecord : RecordBase
 			{
 				PROPERTY(int, Afterbull);
@@ -51,6 +54,8 @@ namespace kantai
 				PROPERTY(MaxEq, Maxeq);
 
 			public:
+				KanRecord() {}
+
 				KanRecord(const json11::Json& json) 
 				{
 					P_INTEGER(Afterbull);

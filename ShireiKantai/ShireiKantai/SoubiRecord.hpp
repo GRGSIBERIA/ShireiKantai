@@ -8,6 +8,9 @@ namespace kantai
 	{
 		namespace DB
 		{
+			/*
+			* ‘•”õƒŒƒR[ƒh
+			*/
 			class SoubiRecord : public RecordBase
 			{
 				PROPERTY(int, Baku);
@@ -31,6 +34,8 @@ namespace kantai
 				PROPERTY(Shigen, Broken);
 
 			public:
+				SoubiRecord() {}
+
 				SoubiRecord(const json11::Json& json) 
 				{
 					P_INTEGER(Baku);
