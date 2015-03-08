@@ -1,0 +1,59 @@
+#pragma once
+
+#include <array>
+#include <memory>
+#include <json11.hpp>
+
+namespace kantai
+{
+	namespace data
+	{
+		/*
+		* 資源を表すクラス
+		*/
+		class Shigen
+		{
+			int fuel;
+			int bullet;
+			int steel;
+			int bauxite;
+
+			const int pFuel() { return fuel; }
+			const int pBullet() { return bullet; }
+			const int pSteel() { return steel; }
+			const int pBauxite() { return bauxite; }
+
+		public:
+			/*
+			* 資源を表すクラス
+			*/
+			Shigen(const int fuel, const int bullet, const int steel, const int bauxite)
+				: fuel(fuel), bullet(bullet), steel(steel), bauxite(bauxite) {}
+
+			/*
+			* 資源を表すクラス
+			* \param [in] shigen 燃料/弾薬/鋼材/ボーキ
+			*/
+			Shigen(const std::array<int, 4>& shigen)
+				: fuel(shigen[0]), bullet(shigen[1]), steel(shigen[2]), bauxite(shigen[3]) {}
+
+			/*
+			* 資源を表すクラス
+			* \param [in] json 資源JSON
+			*/
+			Shigen(const json11::Json& json)
+			{
+				const auto items = json.array_items();
+				fuel = items[0].int_value();
+				bullet = items[1].int_value();
+				steel = items[2].int_value();
+				bauxite = items[3].int_value();
+			}
+
+			__declspec(property(get = pFuel)) const int Fuel;		//!< 燃料
+			__declspec(property(get = pBullet)) const int Bullet;	//!< 弾薬
+			__declspec(property(get = pSteel)) const int Steel;		//!< 鋼材
+			__declspec(property(get = pBauxite)) const int Bauxite;	//!< ボーキ
+		};
+	}
+}
