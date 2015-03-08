@@ -24,5 +24,5 @@
 #define P_STRING(VAR) \
 	VAR = Widen(json[#VAR].string_value());
 
-#define P_SHIGEN(VAR) \
-	VAR = Shigen(json[#VAR]);
+#define P_CLASS(TYPE, VAR) \
+	VAR = TYPE(json[#VAR]);
