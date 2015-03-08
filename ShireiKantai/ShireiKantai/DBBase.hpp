@@ -1,5 +1,4 @@
 #pragma once
-#include "DBBase.hpp"
 
 namespace kantai
 {
@@ -8,9 +7,9 @@ namespace kantai
 		namespace DB
 		{
 			/*
-			* 艦娘用データベース
+			データベースの基底クラス
 			*/
-			class KanDB
+			class DBBase
 			{
 
 			};
