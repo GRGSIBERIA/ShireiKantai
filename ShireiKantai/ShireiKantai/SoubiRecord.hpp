@@ -10,24 +10,25 @@ namespace kantai
 		{
 			class SoubiRecord : public RecordBase
 			{
-				int baku;
-				std::shared_ptr<Shigen> broken;
-				int houg;
-				int houk;
-				int houm;
-				int id;
-				String leng;
-				String name;
-				int raig;
-				int raim;
-				int rare;
-				int saku;
-				int sortno;
-				int tais;
-				int tyku;
-				int type1;
-				int type2;
-				int type3;
+				PROPERTY(int, baku);
+				PROPERTY(int, houg);
+				PROPERTY(int, houk);
+				PROPERTY(int, houm);
+				PROPERTY(int, id);
+				PROPERTY(String, leng);
+				PROPERTY(String, name);
+				PROPERTY(int, raig);
+				PROPERTY(int, raim);
+				PROPERTY(int, rare);
+				PROPERTY(int, saku);
+				PROPERTY(int, sortno);
+				PROPERTY(int, tais);
+				PROPERTY(int, tyku);
+				PROPERTY(int, type1);
+				PROPERTY(int, type2);
+				PROPERTY(int, type3);
+
+				PROPERTY(Shigen, broken);
 
 			public:
 				SoubiRecord(const json11::Json& json) 
@@ -51,6 +52,8 @@ namespace kantai
 
 					id = json["id"].int_value();
 					sortno = json["sortno"].int_value();
+
+					broken = Shigen(json["broken"]);
 				}
 			};
 		}
