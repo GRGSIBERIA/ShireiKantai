@@ -23,7 +23,7 @@ namespace kantai
 				PROPERTY(int, bauxite);
 
 			public:
-				Shigen() {}
+				Shigen() : fuel(0), bullet(0), steel(0), bauxite(0) {}
 
 				/*
 				* Ž‘Œ¹‚ð•\‚·ƒNƒ‰ƒX
