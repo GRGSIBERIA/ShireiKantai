@@ -29,3 +29,6 @@
 
 #define TO_JSON(VAR) \
 	{ #VAR, VAR }
+
+#define TO_JSONC(VAR) \
+	{ #VAR, VAR##.ToJson() }
