@@ -24,7 +24,7 @@ namespace kantai
 				/*
 				* 最大値と最小値を取るクラス
 				*/
-				MinMax() {}
+				MinMax() : min(0), max(0) {}
 
 				/*
 				* 最大値と最小値を取るクラス
