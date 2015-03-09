@@ -1,5 +1,6 @@
 #pragma once
 #include "DBBase.hpp"
+#include "KanRecord.hpp"
 
 namespace kantai
 {
@@ -10,10 +11,10 @@ namespace kantai
 			/*
 			* 艦娘用データベース
 			*/
-			class KanDB : public DBBase
+			class KanDB : public DBBase<KanRecord>
 			{
 			public:
-				KanDB() : DBBase(L"kan.json") {}
+				KanDB() : DBBase(L"Resources/kan.json") {	}
 			};
 		}
 	}

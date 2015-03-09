@@ -1,16 +1,14 @@
 ﻿#include <Siv3D.hpp>
 #include <json11.hpp>
 
-#include "KanRecord.hpp"
-#include "SoubiRecord.hpp"
+#include "KanDB.hpp"
+#include "SoubiDB.hpp"
 
 void Main()
 {
 	const Font font(30);
 
-	kantai::data::DB::KanRecord record;
-
-	auto json = record.ToJson();
+	kantai::data::DB::SoubiDB soubi;
 
 	while (System::Update())
 	{

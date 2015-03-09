@@ -1,5 +1,7 @@
 #pragma once
+
 #include "DBBase.hpp"
+#include "SoubiRecord.hpp"
 
 namespace kantai
 {
@@ -10,10 +12,10 @@ namespace kantai
 			/*
 			* 装備用データベース
 			*/
-			class SoubiDB : public DBBase
+			class SoubiDB : public DBBase<SoubiRecord>
 			{
 			public:
-				SoubiDB() : DBBase(L"soubi.json") {}
+				SoubiDB() : DBBase(L"Resources/soubi.json") { }
 			};
 		}
 	}

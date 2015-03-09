@@ -38,7 +38,7 @@ namespace kantai
 				MaxEq(const json11::Json& json)
 				{
 					const auto items = json.array_items();
-					for (int i = 0; i < items.size(); ++i)
+					for (unsigned int i = 0; i < items.size(); ++i)
 					{
 						slots[i] = items[i].int_value();
 					}
