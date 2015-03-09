@@ -1,16 +1,16 @@
 ﻿#include <Siv3D.hpp>
 #include <json11.hpp>
 
-#include "Shigen.hpp"
+#include "KanRecord.hpp"
+#include "SoubiRecord.hpp"
 
 void Main()
 {
 	const Font font(30);
 
-	kantai::data::DB::Shigen record;
+	kantai::data::DB::KanRecord record;
 
-	auto json = json11::Json::object{ { "test", record.ToJson() } };
-	auto test = json["test"].array_items();
+	auto json = record.ToJson();
 
 	while (System::Update())
 	{
