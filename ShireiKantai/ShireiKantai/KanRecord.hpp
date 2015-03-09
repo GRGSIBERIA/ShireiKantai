@@ -26,7 +26,7 @@ namespace kantai
 				PROPERTY(int, fuel_max);
 				PROPERTY(int, id);
 				PROPERTY(int, slot_num);
-				PROPERTY(int, sortNo);
+				PROPERTY(int, sortno);
 				
 				PROPERTY(String, aftershipid);
 				PROPERTY(String, ctype);
@@ -54,7 +54,12 @@ namespace kantai
 				PROPERTY(MaxEq, maxeq);
 
 			public:
-				KanRecord() {}
+				KanRecord() 
+					: 
+					afterbull(), afterfuel(), afterlv(), buildtime(), 
+					bull_max(), cnum(), fuel_max(), id(), slot_num(),
+					sortno(), aftershipid(), ctype(), leng(), name(), 
+					sokuh(), stype(), yomi() {}
 
 				KanRecord(const json11::Json& json) 
 				{
@@ -67,7 +72,7 @@ namespace kantai
 					P_INTEGER(fuel_max);
 					P_INTEGER(id);
 					P_INTEGER(slot_num);
-					P_INTEGER(sortNo);
+					P_INTEGER(sortno);
 
 					P_STRING(aftershipid);
 					P_STRING(ctype);
@@ -108,7 +113,7 @@ namespace kantai
 						TO_JSON(fuel_max),
 						TO_JSON(id),
 						TO_JSON(slot_num),
-						TO_JSON(sortNo),
+						TO_JSON(sortno),
 
 						TO_JSON(aftershipid),
 						TO_JSON(ctype),

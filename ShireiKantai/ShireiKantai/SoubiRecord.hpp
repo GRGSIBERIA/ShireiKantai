@@ -36,7 +36,11 @@ namespace kantai
 				PROPERTY(Shigen, broken);
 
 			public:
-				SoubiRecord() {}
+				SoubiRecord() 
+					: 
+					baku(), houg(), houk(), houm(), id(), leng(), 
+					name(), raig(), raim(), rare(), saku(), sortno(), 
+					tais(), tyku(), type1(), type2(), type3() {}
 
 				SoubiRecord(const json11::Json& json) 
 				{
@@ -85,7 +89,7 @@ namespace kantai
 						TO_JSON(sortno),
 
 						TO_JSON(leng),
-						TO_JSON(name)
+						TO_JSON(name),
 
 						TO_JSONC(broken)
 					};
