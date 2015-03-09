@@ -9,6 +9,7 @@
 
 *.html
 ShireiKantai/ShireiKantai/ShireiKantai_log.html
+*_log.html
 
 # Build results
 [Dd]ebug/
