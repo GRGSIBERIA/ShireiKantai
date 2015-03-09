@@ -26,7 +26,7 @@ namespace kantai
 				PROPERTY(int, raim);
 				PROPERTY(int, rare);
 				PROPERTY(int, saku);
-				PROPERTY(int, sortNo);
+				PROPERTY(int, sortno);
 				PROPERTY(int, tais);
 				PROPERTY(int, tyku);
 				PROPERTY(int, type1);
@@ -54,7 +54,7 @@ namespace kantai
 					P_INTEGER(type2);
 					P_INTEGER(type3);
 					P_INTEGER(id);
-					P_INTEGER(sortNo);
+					P_INTEGER(sortno);
 
 					P_STRING(leng);
 					P_STRING(name);
@@ -65,7 +65,7 @@ namespace kantai
 				/*
 				* JSON‚É•ÏŠ·
 				*/
-				json11::Json ToJson() const
+				json11::Json ToJson()
 				{
 					return json11::Json::object{
 						TO_JSON(baku),
@@ -82,12 +82,12 @@ namespace kantai
 						TO_JSON(type2),
 						TO_JSON(type3),
 						TO_JSON(id),
-						TO_JSON(sortNo),
+						TO_JSON(sortno),
 
 						TO_JSON(leng),
-						TO_JSON(name),
+						TO_JSON(name)
 
-						TO_JSON(broken.ToJson())
+						TO_JSONC(broken)
 					};
 				}
 			};

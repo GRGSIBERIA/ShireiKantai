@@ -17,27 +17,27 @@ namespace kantai
 			*/
 			class KanRecord : RecordBase
 			{
-				PROPERTY(int, afterBull);
-				PROPERTY(int, afterFuel);
+				PROPERTY(int, afterbull);
+				PROPERTY(int, afterfuel);
 				PROPERTY(int, afterlv);
 				PROPERTY(int, buildtime);
-				PROPERTY(int, bullMax);
-				PROPERTY(int, cNum);
-				PROPERTY(int, fuelMax);
+				PROPERTY(int, bull_max);
+				PROPERTY(int, cnum);
+				PROPERTY(int, fuel_max);
 				PROPERTY(int, id);
-				PROPERTY(int, slotNum);
+				PROPERTY(int, slot_num);
 				PROPERTY(int, sortNo);
 				
 				PROPERTY(String, aftershipid);
-				PROPERTY(String, cType);
+				PROPERTY(String, ctype);
 				PROPERTY(String, leng);
 				PROPERTY(String, name);
 				PROPERTY(String, sokuh);
-				PROPERTY(String, sType);
+				PROPERTY(String, stype);
 				PROPERTY(String, yomi);
 
 				PROPERTY(Shigen, broken);
-				PROPERTY(Shigen, powUp);
+				PROPERTY(Shigen, powup);
 
 				PROPERTY(MinMax, houg);
 				PROPERTY(MinMax, kaih);
@@ -58,27 +58,27 @@ namespace kantai
 
 				KanRecord(const json11::Json& json) 
 				{
-					P_INTEGER(afterBull);
-					P_INTEGER(afterFuel);
+					P_INTEGER(afterbull);
+					P_INTEGER(afterfuel);
 					P_INTEGER(afterlv);
 					P_INTEGER(buildtime);
-					P_INTEGER(bullMax);
-					P_INTEGER(cNum);
-					P_INTEGER(fuelMax);
+					P_INTEGER(bull_max);
+					P_INTEGER(cnum);
+					P_INTEGER(fuel_max);
 					P_INTEGER(id);
-					P_INTEGER(slotNum);
+					P_INTEGER(slot_num);
 					P_INTEGER(sortNo);
 
 					P_STRING(aftershipid);
-					P_STRING(cType);
+					P_STRING(ctype);
 					P_STRING(leng);
 					P_STRING(name);
 					P_STRING(sokuh);
-					P_STRING(sType);
+					P_STRING(stype);
 					P_STRING(yomi);
 
 					P_CLASS(Shigen, broken);
-					P_CLASS(Shigen, powUp);
+					P_CLASS(Shigen, powup);
 					P_CLASS(MinMax, houg);
 					P_CLASS(MinMax, kaih);
 					P_CLASS(MinMax, luck);
@@ -96,42 +96,42 @@ namespace kantai
 				/*
 				* JSON‚É•ÏŠ·
 				*/
-				json11::Json ToJson() const
+				json11::Json ToJson()
 				{
 					return json11::Json::object{
-						TO_JSON(afterBull),
-						TO_JSON(afterFuel),
+						TO_JSON(afterbull),
+						TO_JSON(afterfuel),
 						TO_JSON(afterlv),
 						TO_JSON(buildtime),
-						TO_JSON(bullMax),
-						TO_JSON(cNum),
-						TO_JSON(fuelMax),
+						TO_JSON(bull_max),
+						TO_JSON(cnum),
+						TO_JSON(fuel_max),
 						TO_JSON(id),
-						TO_JSON(slotNum),
+						TO_JSON(slot_num),
 						TO_JSON(sortNo),
 
 						TO_JSON(aftershipid),
-						TO_JSON(cType),
+						TO_JSON(ctype),
 						TO_JSON(leng),
 						TO_JSON(name),
 						TO_JSON(sokuh),
-						TO_JSON(sType),
+						TO_JSON(stype),
 						TO_JSON(yomi),
 
-						TO_JSON(broken.ToJson()),
-						TO_JSON(powUp.ToJson()),
-						TO_JSON(houg.ToJson()),
-						TO_JSON(kaih.ToJson()),
-						TO_JSON(luck.ToJson()),
-						TO_JSON(raig.ToJson()),
-						TO_JSON(saku.ToJson()),
-						TO_JSON(souk.ToJson()),
-						TO_JSON(taik.ToJson()),
-						TO_JSON(tais.ToJson()),
-						TO_JSON(tous.ToJson()),
-						TO_JSON(tyku.ToJson()),
-						TO_JSON(defeq.ToJson()),
-						TO_JSON(maxeq.ToJson())
+						TO_JSONC(broken),
+						TO_JSONC(powup),
+						TO_JSONC(houg),
+						TO_JSONC(kaih),
+						TO_JSONC(luck),
+						TO_JSONC(raig),
+						TO_JSONC(saku),
+						TO_JSONC(souk),
+						TO_JSONC(taik),
+						TO_JSONC(tais),
+						TO_JSONC(tous),
+						TO_JSONC(tyku),
+						TO_JSONC(defeq),
+						TO_JSONC(maxeq)
 					};
 				}
 			};
